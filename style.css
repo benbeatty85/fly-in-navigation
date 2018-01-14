@@ -1,0 +1,89 @@
+/*Navigation slide in and out*/
+
+
+.menu-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #F5F5F5;
+    border: 0;
+    color: darkgoldenrod;
+    font-size: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 20%;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: transform ease-in-out 250ms;
+}
+
+.nav-open {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav-open nav {
+    transform: translateX(0);
+}
+
+.nav-open .container-all {
+    transform: translateX(80%);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: stretch;
+    background: #414141;
+    overflow: hidden;
+}
+
+nav li {
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+
+nav li:hover {
+    background:rgba(255,215,0,0.5);
+}
+
+nav li:focus {
+    background:rgba(255,215,0,0.5);
+}
+
+nav a {
+    font-size: 3rem;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block;
+    width: 100%;
+    padding: calc(100vh/8) 0;
+    line-height: 0;
+}
+
+.close {
+    display: none;
+}
+
+.nav-open .close {
+    display: block;
+}
+
+.nav-open .plane {
+    display: none;
+}
